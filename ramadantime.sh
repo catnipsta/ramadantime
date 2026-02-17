@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -Ls -o $HOME/.ramadantime https://sunrise-sunset.org/il/jerusalem ### LINK TO YOUR CITY
+curl -Ls -o $HOME/.ramadantime https://sunrise-sunset.org/search?location=jerusalem ### EDIT LINK TO MATCH YOUR LOCATION
 d1=$(grep "First light" $HOME/.ramadantime | sed -n '1p' | sed 's/.*at //;s/<.*//')
 s1=$(grep "Sunset time:" $HOME/.ramadantime | sed -n '1p' | sed 's/.*\">//;s/<.*//')
 d2=$(grep "First light" $HOME/.ramadantime | sed -n '2p' | sed 's/.*at //;s/<.*//')
